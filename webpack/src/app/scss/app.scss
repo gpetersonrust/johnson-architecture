@@ -1,0 +1,144 @@
+//  add tailwind css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.x-section.e401-e1.mb5-0.mb5-1.mb5-2  {
+ 
+  padding: 0;
+  position: relative;
+
+
+  .x-container.width {
+  width: 100%;
+}
+
+ 
+ img.img-fit {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.m5lk-1.x-bar {
+  z-index: 0;
+}
+
+ 
+
+.hero-slider{
+  height: 100vh;
+
+  @apply max-h-[800px] lg:max-h-[900px];
+}
+
+.hero-slider-content{
+  @apply relative;
+}
+
+.hero-slider-content {height: 100%;background: transparent;position: absolute;width: 100%;}
+
+}
+
+
+.information {
+  width: fit-content;
+  background: #e4e2e0;
+  padding: .75rem 1rem; 
+
+  .headline{
+    font-size: 18px;
+    transition: ease-in-out 0.3s;
+  }
+
+ 
+
+ 
+}
+
+.information  i, .information icon{
+  color: #6c6c6c;
+  margin-left: 1rem;
+}
+
+
+.information {
+  display: flex;
+  position: absolute;
+ 
+  left: 0;
+ 
+  gap: 1rem;
+
+  @apply bottom-1/4 lg:bottom-[10%]
+}
+
+.information h1, .information h4 {
+  margin: 0 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.information h1{
+  margin-bottom: .15rem;
+}
+
+.subheadline a{
+  font-size: 18px ;
+  color: rgba(127, 147, 98, 0.75);
+  transition: ease-in-out 0.3s;
+  &:hover{
+    color: rgba(127, 147, 98, 0.7) !important;
+  }
+}
+
+.information {
+  justify-content: center;
+ 
+ 
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  opacity: 0;
+  &:hover{
+    transform: translateX(0) !important;
+  }
+}
+
+a.x-anchor.x-anchor-button.has-graphic.e401-e11.mb5-2i.mb5-2j.mb5-2k.mb5-9 {
+  
+ 
+ 
+  transform: rotate(180deg);
+  color: #fff;
+  font-size: 3rem;
+}
+.anchor-div {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  @apply bottom-[14%] lg:bottom-[7%];
+}
+
+.x-section.e401-e1.mb5-0.mb5-1.mb5-2 {
+  padding: 0;
+  overflow: hidden;
+  @apply h-[900px];
+}
+
+a.site-logo {
+  left: 0;
+  margin: clamp(1rem, 4vw, 4rem) clamp(1rem, 4vw, 4rem);
+  position: absolute;
+  top: 0;
+  @apply w-[170px] md:w-[210px] lg:w-[230px];
+
+  z-index: 25;
+
+}
+
+.m5l9-1.x-bar {
+  border: 0;
+  z-index: 5 !important;
+}
