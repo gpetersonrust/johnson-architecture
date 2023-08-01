@@ -1,0 +1,2 @@
+(()=>{"use strict";!function(){let e=[...home_images.home_images],t=e[Math.floor(Math.random()*e.length)],o=t.slider_logo,r=document.getElementById("logo").querySelector("img");o&&r.setAttribute("src",o),document.getElementById("slider-background-image").querySelector("img").setAttribute("src",t.thumbnail);let l=document.getElementById("headline").querySelector("h1 a"),n=document.querySelector("span a");l.href=t.portfolio_link,n.href=t.portfolio_link,l.innerHTML=t.title,n.innerHTML=t.subheadline}()})();
+//# sourceMappingURL=app-wpe5219ae81257605abe02.js.map

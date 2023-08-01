@@ -13,7 +13,7 @@ const paths = fg.sync([
   ignore: ['node_modules', 'dist', '.git'],
 });
 
-const proxy = "https://fly-knoxville-mcgee-tyson.local/";
+const proxy = "https://johnson-dev.local/";
 
 function watch() {
   browserSync.init({

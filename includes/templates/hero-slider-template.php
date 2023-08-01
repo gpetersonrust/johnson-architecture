@@ -1,12 +1,7 @@
-<?php
-
  
-?>
 <div class="hero-slider">
     <div class="hero-slider-content">
-        <a class='site-logo' href="<?php echo site_url(); ?>">
-            <img src="<?php echo $image['slider_logo']; ?>" />
-        </a>
+        
         <div id="information" class="information">
             <div class="primary-text">
                 <h1 class="headline">
@@ -36,3 +31,7 @@
     </div>
     <img src="<?php echo $image['thumbnail']; ?>" alt="" class="img-fit">
 </div>
+
+<script>
+    let slider_logo_url = "<?php echo $image['slider_logo']; ?>";
+</script>

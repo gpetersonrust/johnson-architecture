@@ -103,11 +103,54 @@ class Johnson_Architecture_Public {
 		$directory_url = plugin_dir_url( dirname( __FILE__, 1 ) ) . 'dist/app/';
  
 		 $app_js = $directory_url . 'app' . dynamic_hash() . '.js';
+		 $home_images_array = [];
+		 $args = array(
+			 'post_type' => 'home_images',
+			 'posts_per_page' => -1,
+			 'post_status' => 'publish',
+			 'orderby' => 'date',
+			 'order' => 'ASC',
+		 );
+ 
+		 $home_images = new WP_Query($args);
+ 
+		 if ($home_images->have_posts()) {
+			 while ($home_images->have_posts()) {
+				 $home_images->the_post();
+				 $home_images_array[] = array(
+					 'ID' => get_the_ID(),
+					 'title' =>    get_the_title(),
+					 'thumbnail' => get_the_post_thumbnail_url(null, 'full'),
+					 'subheadline' => strip_tags(get_the_content()),
+					 'portfolio_link' => get_field('portfolio_link'),
+					 'slider_logo' => get_field('slider_logo'),
+				 );
+				;
+			 }
+ 
+			
+		 }
+ 
+		 // Reset the post data after the loop
+		 wp_reset_postdata();
+ 
+		 $this->home_images = $home_images_array;
+		 $this->home_images_IDs = array_map(function($image) {
+			 return $image['ID'];
+		 }, $this->home_images);
+		//  randomly pick one of the images
+		$random_image = $this->home_images[array_rand($this->home_images)];
+
 	   
 		  
 
 		wp_enqueue_script( $this->plugin_name,  $app_js, [], $this->version, true );
-
+        // localize the script with new data
+		$translation_array = array(
+			'home_images' => $this->home_images,
+		 
+		);
+		wp_localize_script( $this->plugin_name, 'home_images', $translation_array );
 	 
 
 	}

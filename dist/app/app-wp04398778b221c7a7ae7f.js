@@ -1,2 +1,0 @@
-(()=>{"use strict";!function(){let t=document.getElementById("information"),e=t.offsetWidth-65;t.style.transform=`translateX(-${e}px)`,setTimeout((()=>{t.style.opacity=1}),1e3)}()})();
-//# sourceMappingURL=app-wp04398778b221c7a7ae7f.js.map
